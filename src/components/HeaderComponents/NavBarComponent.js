@@ -33,6 +33,7 @@ class NavBarComponent extends React.Component {
 }
 
 function mapStateToProps(state) {
+    
     return {
         response : state.tokenDetails,
         hasUserLogIn: state.tokenDetails.hasUserLogIn,
