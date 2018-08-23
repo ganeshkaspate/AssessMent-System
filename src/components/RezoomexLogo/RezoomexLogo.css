@@ -1,0 +1,39 @@
+.rex-logo-container {
+    height: 100%;
+}
+
+.rex-logo-wrapper {    
+    height: 100%;    
+}
+
+.rex-logo {   
+    max-height: 500px; 
+    position: absolute;
+    bottom: 0px;   
+    right: 0px;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 767px) {    
+    .rex-logo { 
+        max-height: 200px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {    
+    .rex-logo { 
+        max-height: 300px;
+    }
+}
+
+@media only screen and (min-width: 1224) {    
+     .rex-logo { 
+        max-height: 400px;
+    }
+}  
+
+
+@media only screen and (min-width: 1824px) { 
+    .rex-logo { 
+        max-height: 700px;
+    }
+ }

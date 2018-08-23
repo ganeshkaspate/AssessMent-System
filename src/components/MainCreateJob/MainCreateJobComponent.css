@@ -1,0 +1,27 @@
+.job-container {
+   text-align: center;
+   margin-top: 90px;
+
+}
+
+.rez-assistant img {
+    height: 100px;
+    margin-bottom: 30px;
+}
+
+.rexdata, b {
+    margin-bottom: 35px;
+    font-size: 16px
+}
+.jobData {
+    color: #aaa;
+    margin-bottom: 35px;
+    font-size: 16px;
+}
+.create-button {
+     border-radius: 0px;
+    background-color: #4986E7;
+}
+.create-job-container {
+    overflow: hidden;
+}
