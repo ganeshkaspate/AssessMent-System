@@ -1,0 +1,52 @@
+#jobData {
+    tbody {
+        text-align: center;
+    }
+
+    tr > th {
+        text-align: center;
+        padding: 15px;
+    }
+
+    tr {
+        height: 50px;
+    }
+    tr td{
+        vertical-align: middle !important;
+        border-top: 0px;
+    }
+
+    thead th{
+        vertical-align: middle !important;
+
+    }
+
+    .table {
+        tbody, tfoot, thead {
+            tr {
+                th, td {
+                    border-top: 0px;
+                }
+            }
+
+        }
+    }
+}
+#scrollableTable  {
+    max-height: 450px;
+    overflow: auto;
+    padding: 0px !important;
+}
+
+#score {
+    .table {
+        tbody, tfoot, thead {
+            tr {
+                th, td {
+                    border-top: 0px;
+                }
+            }
+
+        }
+    }
+}

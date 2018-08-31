@@ -1,0 +1,65 @@
+.selectjob {
+    background-color: #f1f1f1;
+    padding: 15px;
+}
+.create-job-container {
+    margin-top: 80px;
+    text-align: center;
+}
+#jobText {
+    margin-bottom: 30px;
+}
+.form-group > label {
+    margin-right: 10px;
+}
+.jd-button {
+    background-color: #C1BEC2;
+}
+.createjob {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.createjob > img {
+    height: 75px;
+    margin-bottom: 20px;
+}
+#jobTitle {
+    margin-bottom: 30px;
+}
+.modal-content { 
+    border-radius: 0px;   
+}
+.modal-header {
+    border-bottom: 0px;
+}
+.modal-footer {
+    border-top: 0px;
+}
+#jobDescriptionContent {
+    resize: none;
+    background: url(./jobDescription.png) no-repeat no-repeat scroll 12px 7px;
+     background-size: 19px;
+     padding-left: 45px;
+}
+.userNameJob {
+    color: #4986E7;
+    font-style: italic;
+}
+#jdName {
+     background: url(./job.png) no-repeat no-repeat scroll 12px 15px;
+     background-size: 19px;
+     padding-left: 45px;
+}
+.selectjob {
+     min-height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+.add-btn {
+    background-color: #F5A623;
+}
+.upload-btn {
+  background-color: #0F9D8F;
+}
