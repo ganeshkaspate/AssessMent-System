@@ -1,11 +1,73 @@
 import React from 'react';
-
+import './SearchJob.css';
+import rewards from '../../images/reward.png';
 
 export default class SearchJobComponent extends React.Component {
+
     render() {
+
+        const search = {
+            paddingRight: '0px',
+            paddingTop: '5px'
+        }
+
+
+        const rewardscss = {
+            height: '23px'
+        }
+
+        const buttonwidth = {
+            width: '100%',
+            paddingTop: '5px'
+        }
+        const labelPadding = {
+            marginTop: '12px'
+        }
+        const selectPadding = {
+            paddingTop: '5px'
+        }
+
         return (
-            <div className="row">
-                Search Job
+            <div className="wrapper">
+                <div className="col-xs-4">
+                    <label className="control-label col-xs-2 noPadding" style={labelPadding} >Search Job</label>
+                    <div className="col-xs-10" style={search}>
+                        <input type="text"
+                            className="form-control"
+                            id="inputValidation"
+                            placeholder="Search" />
+                        <span className="glyphicon glyphicon-search form-control-feedback"></span>
+                    </div>
+                </div>
+                <div className="col-xs-3">
+                    <label className="control-label col-xs-3 noPadding" style={labelPadding} >Arrange By</label>
+                    <div className="col-xs-9" style={selectPadding}>
+                        <select id="company" name="company" className="form-control">
+                            <option disabled selected value>None Selected</option>
+                            <option>Synerzip</option>
+                            <option>Avalara Solutions</option>
+                            <option>Tech Mahindra</option>
+                            <option>Amdocs</option>
+                            <option>Symantec</option>
+                        </select>
+                    </div>
+                </div>
+                <div className="col-xs-2" style={selectPadding}>
+                    <div className="col-xs-12">
+                        <button type="submit" style={buttonwidth} className="btn btn-primary">+</button>
+                    </div>
+                </div>
+                <div className="col-xs-3" style={selectPadding}>
+                    <div className="points col-xs-2">
+                        <img src={rewards} style={rewardscss} alt="Dispute Bills" />
+                    </div>
+                    <div className="points col-xs-7" style={selectPadding}>
+                        <span>Total Reward Points</span>
+                    </div>
+                    <div className=" rewards col-xs-3" style={selectPadding}>
+                                124
+                    </div>
+                </div>
             </div>
         )
     }
