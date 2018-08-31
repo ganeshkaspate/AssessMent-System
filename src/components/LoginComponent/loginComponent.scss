@@ -1,0 +1,67 @@
+.login, .login > img {
+    height: 35px;
+    text-align: center;
+}
+.login-container {
+    height: calc(100vh - 90px)
+}
+.form-container {
+    margin-top: 90px;
+}
+.rex-logo-container{
+    height: 100%;
+}
+.app-logo img {
+    height: 40px;
+    margin-bottom: 35px;
+    text-align: center;
+}
+.app-logo {
+    text-align: center;
+}
+.app-name {
+    margin-bottom: 35px;
+}
+#username-div {
+    margin-bottom: 35px;
+}
+.form-group input {
+    border-radius: 0px;
+}
+.forgot-password {
+    text-align: center;
+    margin-bottom: 35px;
+    color: #4986E7
+}
+.login-button {
+    border-radius: 0px;
+    background-color: #4986E7;
+}
+.no-padding {
+    padding:  0px;
+}
+
+/* enable absolute positioning */
+.inner-addon { 
+    position: relative; 
+}
+
+/* style icon */
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+  top: 7px;
+}
+
+/* align icon */
+.left-addon .glyphicon  { left:  0px;}
+.right-addon .glyphicon { right: 0px;}
+
+/* add padding  */
+.left-addon input  { padding-left:  30px; }
+.right-addon input { padding-right: 30px; }
+
+.form-group input {
+    height: 50px;
+}
