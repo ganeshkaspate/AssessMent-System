@@ -18,7 +18,9 @@ export default class SearchJobComponent extends React.Component {
 
         const buttonwidth = {
             width: '100%',
-            paddingTop: '5px'
+            paddingTop: '5px',
+            backgroundColor: '#4986E7',
+            colour: 'white'
         }
         const labelPadding = {
             marginTop: '12px'
@@ -29,7 +31,7 @@ export default class SearchJobComponent extends React.Component {
 
         return (
             <div className="wrapper">
-                <div className="col-xs-4">
+                <div className="col-xs-4" id="search-job">
                     <label className="control-label col-xs-3 noPadding" style={labelPadding} >Search Job</label>
                     <div className="col-xs-9" style={search}>
                         <input type="text"
@@ -54,7 +56,7 @@ export default class SearchJobComponent extends React.Component {
                 </div>
                 <div className="col-xs-2" style={selectPadding}>
                     <div className="col-xs-12">
-                        <button type="submit" style={buttonwidth} className="btn btn-primary">
+                        <button type="submit" style={buttonwidth} className="btn">
                             <span>+</span>
                         </button>
                     </div>
