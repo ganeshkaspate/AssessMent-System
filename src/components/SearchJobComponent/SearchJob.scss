@@ -1,14 +1,21 @@
 .wrapper {
     height: 45px;
     background-color: #f1f1f1;
-}
-
-.noPadding {
-    padding: 0px;
-}
+    .noPadding {
+        padding: 0px;
+    }
 .rewards {
     text-align: center;
     padding-top: 5px;
-    border: 1px solid;
     padding-bottom: 4px;
+    background-color: #E6D4FF;
+    .span {
+        color: #7F2EE9;
+    }
 }
+  .form-control-feedback {
+      top : 5px;
+  }
+  
+}
+

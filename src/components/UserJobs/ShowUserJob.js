@@ -13,11 +13,9 @@ class ShowUserJob extends React.Component {
     render() {
 
         const template =
-            this.props.jobDescription.isDataFetching ? (
-                <Loader />
-            ) : (<JobDescriptionTable jdRecords={this.props.jobData}/>)
+            this.props.jobDescription.isDataFetching ? (<Loader />) : (<JobDescriptionTable jdRecords={this.props.jobData}/>)
         return (
-            <div>
+            <div className='user-job-wrapper'>
                 {template}
             </div>
         )

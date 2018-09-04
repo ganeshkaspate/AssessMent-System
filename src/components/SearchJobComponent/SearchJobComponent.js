@@ -30,8 +30,8 @@ export default class SearchJobComponent extends React.Component {
         return (
             <div className="wrapper">
                 <div className="col-xs-4">
-                    <label className="control-label col-xs-2 noPadding" style={labelPadding} >Search Job</label>
-                    <div className="col-xs-10" style={search}>
+                    <label className="control-label col-xs-3 noPadding" style={labelPadding} >Search Job</label>
+                    <div className="col-xs-9" style={search}>
                         <input type="text"
                             className="form-control"
                             id="inputValidation"
@@ -54,7 +54,9 @@ export default class SearchJobComponent extends React.Component {
                 </div>
                 <div className="col-xs-2" style={selectPadding}>
                     <div className="col-xs-12">
-                        <button type="submit" style={buttonwidth} className="btn btn-primary">+</button>
+                        <button type="submit" style={buttonwidth} className="btn btn-primary">
+                            <span>+</span>
+                        </button>
                     </div>
                 </div>
                 <div className="col-xs-3" style={selectPadding}>
@@ -64,8 +66,8 @@ export default class SearchJobComponent extends React.Component {
                     <div className="points col-xs-7" style={selectPadding}>
                         <span>Total Reward Points</span>
                     </div>
-                    <div className=" rewards col-xs-3" style={selectPadding}>
-                                124
+                    <div className="rewards col-xs-3" style={selectPadding}>
+                               <span> 124 </span>
                     </div>
                 </div>
             </div>

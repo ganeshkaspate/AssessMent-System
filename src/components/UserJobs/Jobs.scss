@@ -1,52 +1,125 @@
-#jobData {
-    tbody {
-        text-align: center;
-    }
-
-    tr > th {
-        text-align: center;
-        padding: 15px;
-    }
-
-    tr {
-        height: 50px;
-    }
-    tr td{
-        vertical-align: middle !important;
-        border-top: 0px;
-    }
-
-    thead th{
-        vertical-align: middle !important;
-
-    }
-
-    .table {
-        tbody, tfoot, thead {
-            tr {
-                th, td {
-                    border-top: 0px;
-                }
-            }
-
-        }
-    }
+.user-job-wrapper {
+  //height: calc(100vh - 100px);
 }
-#scrollableTable  {
-    max-height: 450px;
-    overflow: auto;
-    padding: 0px !important;
+
+.user-job-container {
+  height: 100%;
+}
+#jobData {
+  tbody {
+    text-align: center;
+  }
+
+  tr > th {
+    text-align: center;
+    padding: 15px;
+  }
+
+  tr {
+    height: 50px;
+  }
+  tr td {
+    vertical-align: middle !important;
+    border-top: 0px;
+  }
+
+  thead th {
+    vertical-align: middle !important;
+
+  }
+
+  .table {
+    tbody, tfoot, thead {
+      tr {
+        th, td {
+          border-top: 0px;
+        }
+      }
+
+    }
+  }
+  .company-column {
+    width: 320px;
+  }
+  .technology-column {
+    width: 300px;
+  }
+  .job-column {
+    text-align: center;
+  }
+  .total-score-column {
+    width: 140px;
+  }
+  .average-score-column {
+    width: 170px;
+  }
+}
+
+#scrollableTable {
+  height: 400px;
+  overflow: auto;
+  padding: 0px !important;
+}
+
+.serial-column {
+  width: 70px;
 }
 
 #score {
-    .table {
-        tbody, tfoot, thead {
-            tr {
-                th, td {
-                    border-top: 0px;
-                }
-            }
-
+  // -webkit-box-shadow: 0px -4px 10px 0px rgba(0,0,0,0.50);
+  // -moz-box-shadow: 0px -4px 10px 0px rgba(0,0,0,0.50);
+  // box-shadow: 0px -4px 10px 0px rgba(0,0,0,0.50);
+  box-shadow: 0 -4px 10px 0 rgba(0,0,0,0.50);
+  margin-top: 10px;
+  tr {
+    height: 50px;
+  }
+  .total-row {
+    color: #ffffff;
+   background-image: linear-gradient(-225deg, #26C4D3 0%, #4F8BE8 49%, #4986E7 100%);
+  }
+  .table {
+    tbody, tfoot, thead {
+      tr {
+        th, td {
+          border-top: none;
         }
+      }
+
     }
+  }
+  .company-column {
+    width: 320px;
+  }
+  .technology-column {
+    width: 300px;
+  }
+  .job-column {
+    text-align: center;
+    vertical-align: middle !important;
+    font-size: 16px;
+  }
+  .total-score-column {
+    width: 140px;
+    text-align: center;
+    vertical-align: middle !important;
+  }
+  .average-score-column {
+    width: 170px;
+    text-align: center;
+    vertical-align: middle !important;
+  }
+}
+
+//media query for scrollable table
+@media (min-width: 1871px) {
+  #scrollableTable {
+    height: 686px !important;
+  }
+}
+@media (min-width: 768px)and (max-width: 1870px){
+  #scrollableTable {
+    height: 374px !important;
+  
+  }
 }
