@@ -1,6 +1,6 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { Table } from 'react-bootstrap';
+import {connect} from 'react-redux';
+import {Table} from 'react-bootstrap';
 import './Jobs.css';
 
 
@@ -22,19 +22,19 @@ class UserJobs extends React.Component {
         }
 
         return (
-            <div className="container-fluid">
+            <div className="container-fluid user-job-container">
                 <div className="row">
                     <div className="col-xs-12 " id="scrollableTable">
                         <Table striped condensed hover id="jobData">
                             <thead style={backgrounColour}>
-                                <tr>
-                                    <th>Sr.No.</th>
-                                    <th>Company Name</th>
-                                    <th>Technology</th>
-                                    <th>Job Title</th>
-                                    <th>Total Score</th>
-                                    <th>Average Score</th>
-                                </tr>
+                            <tr>
+                                <th className='serial-column'>Sr.No.</th>
+                                <th className='company-column'>Company Name</th>
+                                <th className='technology-column'>Technology</th>
+                                <th className='job-column'>Job Title</th>
+                                <th className='total-score-column'>Total Score</th>
+                                <th className='average-score-column'>Average Score</th>
+                            </tr>
                             </thead>
                             <tbody>{this.props.jobData.map(function (item, key) {
                                 return (
@@ -48,28 +48,57 @@ class UserJobs extends React.Component {
                                     </tr>
                                 )
                             })}</tbody>
-                            
                         </Table>
                     </div>
                 </div>
-                {/*<div className="row">
-                    <Table condensed hover id="score">
+                <div className="row">
+                    <Table condensed  id="score">
                         <tbody>
-                            <tr>
-                                <td colSpan={3}>
-                                    YesterDay's Score
-                                </td>
-                                <td >
-                                    240
-                                    </td>
-                                <td >
-                                    30
-                                    </td>
-                            </tr>
+                        <tr>
+                            <td className='serial-column'></td>
+                            <td className='company-column'></td>
+                            <td className='technology-column'></td>
+                            <td className='job-column'>
+                                Yesterday's Score
+                            </td>
+                            <td className='total-score-column'>
+                                <b>240</b>
+                            </td>
+                            <td className='average-score-column'>
+                                <b>30</b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td className='serial-column'></td>
+                            <td className='company-column'></td>
+                            <td className='technology-column'></td>
+                            <td className='job-column'>
+                                Score Added Today
+                            </td>
+                            <td className='total-score-column'>
+                                <b>60</b>
+                            </td>
+                            <td className='average-score-column'>
+                                <b>00</b>
+                            </td>
+                        </tr>
+                        <tr className='total-row'>
+                            <td className='serial-column'></td>
+                            <td className='company-column'></td>
+                            <td className='technology-column'></td>
+                            <td className='job-column'>
+                                Upto Date Score
+                            </td>
+                            <td className='total-score-column'>
+                                <b>300</b>
+                            </td>
+                            <td className='average-score-column'>
+                                <b>30</b>
+                            </td>
+                        </tr>
                         </tbody>
                     </Table>
-                </div>*/}
-
+                </div>
             </div>
         )
 
