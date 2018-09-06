@@ -1,4 +1,4 @@
-import { FETCHING_JOBDESCRIPTION_SUCCESS, FETCHING_JOBDESCRIPTION_FAILED, FETCHING_JOBS } from '../constants/AppConstants';
+import { FETCHING_JOBDESCRIPTION_SUCCESS, FETCHING_JOBDESCRIPTION_FAILED, FETCHING_JOBS, CREATE_ROW, REMOVE_ROW } from '../constants/AppConstants';
 import { getUserJobs } from '../APIs/GetUserJd';
 import history from '../history';
 
@@ -43,5 +43,18 @@ export function sendUserJd(data) {
 export function fetchingJobDescription() {
     return {
         type: FETCHING_JOBS
+    }
+}
+
+export function createNewRow() {
+    return {
+        type: CREATE_ROW,
+        isRowEditingDisabled: true
+    }
+}
+
+export function removeRow() {
+    return {
+        type: REMOVE_ROW,
     }
 }

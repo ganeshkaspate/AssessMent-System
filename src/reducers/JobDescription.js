@@ -1,4 +1,4 @@
-import { FETCHING_JOBDESCRIPTION_SUCCESS, FETCHING_JOBDESCRIPTION_FAILED, FETCHING_JOBS } from '../constants/AppConstants';
+import { FETCHING_JOBDESCRIPTION_SUCCESS, FETCHING_JOBDESCRIPTION_FAILED, FETCHING_JOBS, CREATE_ROW, REMOVE_ROW } from '../constants/AppConstants';
 
 
 const initialState = {
@@ -6,7 +6,8 @@ const initialState = {
     isDataFetching: false,
     dataFetched: false,
     error: false,
-    label: ''
+    label: '',
+    isRowEditingDisabled: false
 }
 
 export default function JobDescriptionData(state = initialState, action) {
@@ -32,6 +33,16 @@ export default function JobDescriptionData(state = initialState, action) {
                 dataFetched: false,
                 isDataFetching: true,
                 error: true
+            }
+        case CREATE_ROW:
+            return {
+                ...state,
+                isRowEditingDisabled: true
+            }
+        case REMOVE_ROW:
+            return {
+                ...state,
+                isRowEditingDisabled: false
             }
         default:
             return state

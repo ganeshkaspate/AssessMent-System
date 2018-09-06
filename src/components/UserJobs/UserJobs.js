@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {Table} from 'react-bootstrap';
+import RowAddingEditor from '../CreateNewJob/CreateNewJob';
 import './Jobs.css';
 
 
@@ -9,7 +10,8 @@ class UserJobs extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            jdRecords: props.jdRecords
+            jdRecords: props.jdRecords,
+            isRowAddingEditorVisible: this.props.isRowEditingDisabled
         }
     }
 
@@ -36,7 +38,9 @@ class UserJobs extends React.Component {
                                 <th className='average-score-column'>Average Score</th>
                             </tr>
                             </thead>
-                            <tbody>{this.props.jobData.map(function (item, key) {
+                            <tbody>
+                                {this.props.isRowEditingDisabled && <RowAddingEditor />}  
+                                {this.props.jobData.map(function (item, key) {
                                 return (
                                     <tr key={key}>
                                         <td><b style={compName}>{item.id}</b></td>
@@ -107,9 +111,11 @@ class UserJobs extends React.Component {
 
 
 function mapStateToProps(state) {
+    console.log(state.JobDescriptionData.isRowEditingDisabled);
     return {
         jobDescription: state.JobDescriptionData,
-        jobData: state.JobDescriptionData.jobData.data
+        jobData: state.JobDescriptionData.jobData.data,
+        isRowEditingDisabled: state.JobDescriptionData.isRowEditingDisabled
     }
 }
 
