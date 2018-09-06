@@ -71,6 +71,7 @@
   // box-shadow: 0px -4px 10px 0px rgba(0,0,0,0.50);
   box-shadow: 0 -4px 10px 0 rgba(0,0,0,0.50);
   margin-top: 10px;
+  margin-bottom: 0px !important;
   tr {
     height: 50px;
   }
@@ -116,14 +117,36 @@
 }
 
 //media query for scrollable table
-@media (min-width: 1871px) {
+
+
+
+@media (min-width: 1920px) {
   #scrollableTable {
-    height: 686px !important;
+    height: 726px !important;
   }
 }
-@media (min-width: 768px)and (max-width: 1870px){
+
+@media (min-width: 768px)and (max-width: 1023px){
   #scrollableTable {
-    height: 374px !important;
-  
+    height: 368px !important;  
+  }
+}
+
+@media (min-width: 1024px)and (max-width: 1280px){
+  #scrollableTable {
+    height: 354px !important;  
+  }
+}
+
+@media (min-width: 1281px)and (max-width: 1366px){
+  #scrollableTable {
+    height: 414px !important;  
+  }
+}
+
+
+  @media (min-width: 1367px)and (max-width: 1919px){
+  #scrollableTable {
+    height: 726px !important;  
   }
 }

@@ -1,8 +1,16 @@
 import React from 'react';
 import './SearchJob.css';
 import rewards from '../../images/reward.png';
+import { createNewRow } from '../../actions/GetUserJd';
+import { connect } from 'react-redux';
 
-export default class SearchJobComponent extends React.Component {
+class SearchJobComponent extends React.Component {
+
+    handleClick(event) {
+        console.log("calling this ");
+        this.props.createNewRow();
+    }
+
 
     render() {
 
@@ -10,7 +18,6 @@ export default class SearchJobComponent extends React.Component {
             paddingRight: '0px',
             paddingTop: '5px'
         }
-
 
         const rewardscss = {
             height: '23px'
@@ -56,7 +63,7 @@ export default class SearchJobComponent extends React.Component {
                 </div>
                 <div className="col-xs-2" style={selectPadding}>
                     <div className="col-xs-12">
-                        <button type="submit" style={buttonwidth} className="btn">
+                        <button type="submit" style={buttonwidth} className="btn" onClick={(event) => this.handleClick(event)}>
                             <span>+</span>
                         </button>
                     </div>
@@ -69,10 +76,18 @@ export default class SearchJobComponent extends React.Component {
                         <span>Total Reward Points</span>
                     </div>
                     <div className="rewards col-xs-3" style={selectPadding}>
-                               <span> 124 </span>
+                        <span> 124 </span>
                     </div>
                 </div>
             </div>
         )
     }
 }
+
+function mapDispatchToProps(dispatch) {
+    return {
+        createNewRow: () => dispatch(createNewRow()),
+    }
+}
+
+export default connect(null, mapDispatchToProps)(SearchJobComponent);
